@@ -1,5 +1,7 @@
 # Lesson Planner Skill - Guida rapida
-
+Questa skill per openclaw é una versione semplificata della https://github.com/saniales/ai-lesson-planner di Alessando Sannino
+che offre funzionalità estese come l'analisi competitiva del corso, ma necessita di githb actions e quindi copilot.
+Questa versione consente l'utilizzo di diversi modelli e chiavi openrouter.
 ## Installazione
 
 1. Nella cartella della skill:
