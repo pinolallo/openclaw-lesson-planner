@@ -60,7 +60,10 @@ lesson-planner export-pdf --lesson "intro-python" --output-dir ./lessons
 
 - Use `--output-dir` to specify the output directory for course files.
 - Alternatively, you can set the `LESSON_PLANNER_CONFIG_DIR` environment variable.
-- Default model: `gpt-4o-mini` (OpenAI). With OpenRouter use namespaced models like `openai/gpt-4o-mini` or `anthropic/claude-3.5-sonnet`.
+- Model selection: automatic per command.
+  - `plan-course`: high-quality reasoning (OpenAI: `gpt-4o`, OpenRouter: `anthropic/claude-3.5-sonnet`)
+  - `generate-lesson`: fast and cost-effective (OpenAI: `gpt-4o-mini`, OpenRouter: `stepfun/step-3.5-flash:free`)
+  Override with `--model` when needed.
 - This skill is independent of OpenClaw; you can also use it from the command line.
 
 ## Integration with OpenClaw

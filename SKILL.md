@@ -100,11 +100,20 @@ lesson-planner export-pdf --lesson "lezione-1-introduzione-architettura" --outpu
 
 ### Other parameters
 
-- Model: `--model <string>` (default: `gpt-4o-mini` for OpenAI; for OpenRouter use full model name like `openai/gpt-4o-mini`).
+- Model: `--model <string>` – specific AI model (OpenAI or OpenRouter with namespace). If omitted, a suitable default is chosen based on the command and provider (see below).
 - Language: `--lang it|en` (default: `it`).
 - Base URL: `--base-url <url>` to manually override API endpoint (e.g., for OpenAI-compatible providers).
 - Output directory: `--output-dir <path>` (default: current directory). Specifies where to save course files.
 - Lesson: `--lesson <string>` – export only the specified lesson (optional).
+
+### Automatic model selection
+
+If `--model` is not provided, the skill selects an appropriate model per command:
+
+- `plan-course`: high-quality reasoning (OpenAI: `gpt-4o`, OpenRouter: `anthropic/claude-3.5-sonnet`)
+- `generate-lesson`: fast and cost-effective (OpenAI: `gpt-4o-mini`, OpenRouter: `stepfun/step-3.5-flash:free`)
+
+Overriding the default is possible with `--model`.
 
 ### Examples
 

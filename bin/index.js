@@ -125,9 +125,13 @@ Regole:
 `;
 
   try {
+    const model = resolveModel(options, 'plan-course') || 'gpt-4o-mini';
+
     const client = createOpenAIClient(options);
+
     const response = await client.chat.completions.create({
-      model: options.model || 'gpt-4o-mini',
+
+      model: model,
       messages: [{ role: 'user', content: prompt }],
       temperature: 0.7
     });
@@ -228,9 +232,13 @@ Requisiti:
 `;
 
   try {
+    const model = resolveModel(options, 'generate-lesson') || 'gpt-4o-mini';
+
     const client = createOpenAIClient(options);
+
     const response = await client.chat.completions.create({
-      model: options.model || 'gpt-4o-mini',
+
+      model: model,
       messages: [{ role: 'user', content: prompt }],
       temperature: 0.7
     });
@@ -350,7 +358,7 @@ program.command('plan-course')
   .option('--topics <string>', 'Argomenti principali, separati da virgola')
   .option('--duration <string>', 'Durata per lezione (es: 90 min)')
   .option('--lang <string>', 'Lingua (it, en)', 'it')
-  .option('--model <string>', 'Modello AI (OpenAI o OpenRouter con namespace)', 'gpt-4o-mini')
+  .option('--model <string>', 'Modello AI (OpenAI o OpenRouter con namespace)')
   .option('--output-dir <string>', 'Directory di output per i file del corso (default: CWD)')
   .action(planCourse);
 
@@ -359,7 +367,7 @@ program.command('generate-lesson')
   .requiredOption('--id <string>', 'ID slug della lezione (es: intro-python)')
   .requiredOption('--title <string>', 'Titolo della lezione')
   .option('--lang <string>', 'Lingua (it, en)', 'it')
-  .option('--model <string>', 'Modello AI (OpenAI o OpenRouter con namespace)', 'gpt-4o-mini')
+  .option('--model <string>', 'Modello AI (OpenAI o OpenRouter con namespace)')
   .option('--output-dir <string>', 'Directory di output per i file del corso (default: CWD)')
   .action(generateLesson);
 
