@@ -1,6 +1,6 @@
 # Lesson Planner Skill - Quick Guide
 
-This skill for OpenClaw is a simplified version of https://github.com/saniales/ai-lesson-planner by Alessandro Sannino that offers extended features like course competitive analysis, but requires GitHub Actions and therefore Copilot. This version allows the use of different models and OpenRouter keys.
+This skill for OpenClaw is a simplified version of https://github.com/saniales/ai-lesson-planner by Alessandro Sanino that offers extended features like course competitive analysis, but requires GitHub Actions and therefore Copilot. This version allows the use of different models and OpenRouter keys.
 
 ## Installation
 
