@@ -1,14 +1,19 @@
 {
-  "name": "lesson-planner",
+  "name": "openclaw-lesson-planner",
   "version": "0.1.0",
-  "description": "Skill per pianificare corsi e generare lezioni, ispirata a ai-lesson-planner ma nativa per OpenClaw",
+  "description": "OpenClaw skill to plan courses and generate lessons with OpenRouter support",
   "main": "bin/index.js",
   "bin": {
     "lesson-planner": "./bin/index.js"
   },
-  "keywords": ["openclaw", "skill", "course", "lesson", "education"],
+  "keywords": ["openclaw", "skill", "course", "lesson", "education", "ai"],
   "author": "Lallo special agent",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pinolallo/openclaw-lesson-planner.git"
+  },
+  "homepage": "https://github.com/pinolallo/openclaw-lesson-planner",
   "dependencies": {
     "commander": "^13.0.0",
     "openai": "^4.0.0"
