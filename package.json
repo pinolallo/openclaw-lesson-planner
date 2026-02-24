@@ -6,7 +6,14 @@
   "bin": {
     "lesson-planner": "./bin/index.js"
   },
-  "keywords": ["openclaw", "skill", "course", "lesson", "education", "ai"],
+  "keywords": [
+    "openclaw",
+    "skill",
+    "course",
+    "lesson",
+    "education",
+    "ai"
+  ],
   "author": "Lallo special agent",
   "license": "MIT",
   "repository": {
@@ -16,6 +23,7 @@
   "homepage": "https://github.com/pinolallo/openclaw-lesson-planner",
   "dependencies": {
     "commander": "^13.0.0",
-    "openai": "^4.0.0"
+    "openai": "^4.0.0",
+    "openclaw-lesson-planner": "^0.1.0"
   }
 }
