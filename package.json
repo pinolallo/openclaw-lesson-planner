@@ -1,6 +1,6 @@
 {
   "name": "openclaw-lesson-planner",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "OpenClaw skill to plan courses and generate lessons with OpenRouter support",
   "main": "bin/index.js",
   "bin": {
