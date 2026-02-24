@@ -1,68 +1,68 @@
-# Lesson Planner Skill - Guida rapida
-Questa skill per openclaw é una versione semplificata della https://github.com/saniales/ai-lesson-planner di Alessando Sannino
-che offre funzionalità estese come l'analisi competitiva del corso, ma necessita di githb actions e quindi copilot.
-Questa versione consente l'utilizzo di diversi modelli e chiavi openrouter.
-## Installazione
+# Lesson Planner Skill - Quick Guide
 
-1. Nella cartella della skill:
+This skill for OpenClaw is a simplified version of https://github.com/saniales/ai-lesson-planner by Alessandro Sannino that offers extended features like course competitive analysis, but requires GitHub Actions and therefore Copilot. This version allows the use of different models and OpenRouter keys.
+
+## Installation
+
+1. In the skill folder:
 ```bash
 cd /path/to/lesson-planner-skill
 npm install
 ```
 
-2. Configura API key:
+2. Configure API key:
    - **OpenAI:** `export OPENAI_API_KEY="sk-..."`
-   - **OpenRouter** (consigliato per più scelta di modelli): `export OPENROUTER_API_KEY="sk-or-..."`
-     Opzionale: `OPENROUTER_REFERER` (default: https://openclaw.ai) e `OPENROUTER_TITLE` (default: OpenClaw Lesson Planner).
-   Puoi anche usare un file `.env` con le variabili.
+   - **OpenRouter** (recommended for more model choices): `export OPENROUTER_API_KEY="sk-or-..."`
+     Optional: `OPENROUTER_REFERER` (default: https://openclaw.ai) and `OPENROUTER_TITLE` (default: OpenClaw Lesson Planner).
+   You can also use a `.env` file with these variables.
 
 ### Override endpoint
 
-Usa `--base-url <url>` per specificare un endpoint API personalizzato (es. per provider compatibili con OpenAI). Quando usi OpenRouter, l'endpoint è automatico.
+Use `--base-url <url>` to specify a custom API endpoint (e.g., for providers compatible with OpenAI). When using OpenRouter, the endpoint is automatic.
 
-3. Installa il binario globalmente (opzionale):
+3. Install the binary globally (optional):
 ```bash
 npm link
 ```
-Ora `lesson-planner` sarà disponibile ovunque.
+Now `lesson-planner` will be available everywhere.
 
-## Utilizzo rapido
+## Quick usage
 
 ```bash
-# 1) Progetta un corso (nella directory desiderata)
+# 1) Plan a course (in the desired directory)
 lesson-planner plan-course \
-  --title "Introduzione a Python" \
-  --audience "studenti del triennio superiore" \
+  --title "Introduction to Python" \
+  --audience "high school seniors" \
   --lessons 12 \
-  --topics "basi della sintassi, tipi di dati, funzioni, OOP, file" \
+  --topics "basic syntax, data types, functions, OOP, files" \
   --lang it \
-  --output-dir ./lezioni
+  --output-dir ./lessons
 
-# 2) Scaffold tutte le lezioni (nella stessa directory di output)
-lesson-planner scaffold-course --output-dir ./lezioni
+# 2) Scaffold all lessons (in the same output directory)
+lesson-planner scaffold-course --output-dir ./lessons
 
-# 3) Genera i contenuti per ogni lezione (una alla volta)
+# 3) Generate content for each lesson (one at a time)
 lesson-planner generate-lesson \
   --number 01 \
   --id "intro-python" \
-  --title "Introduzione a Python" \
+  --title "Introduction to Python" \
   --lang it \
-  --output-dir ./lezioni
+  --output-dir ./lessons
 
-# 4) (opzionale) Esporta PDF (tutte le lezioni)
-lesson-planner export-pdf --output-dir ./lezioni
+# 4) (optional) Export PDF (all lessons)
+lesson-planner export-pdf --output-dir ./lessons
 
-# oppure singola lezione
-lesson-planner export-pdf --lesson "intro-python" --output-dir ./lezioni --output-dir ./lezioni
+# or single lesson
+lesson-planner export-pdf --lesson "intro-python" --output-dir ./lessons
 ```
 
-## Note
+## Notes
 
-- Usa `--output-dir` per specificare la directory di output dei file del corso.
-- In alternativa, puoi impostare la variabile d'ambiente `LESSON_PLANNER_CONFIG_DIR`.
-- Modello predefinito: `gpt-4o-mini` (OpenAI). Con OpenRouter usa modelli con namespace come `openai/gpt-4o-mini` o `anthropic/claude-3.5-sonnet`.
-- Questa skill è indipendente da OpenClaw; puoi usarla anche da riga di comando.
+- Use `--output-dir` to specify the output directory for course files.
+- Alternatively, you can set the `LESSON_PLANNER_CONFIG_DIR` environment variable.
+- Default model: `gpt-4o-mini` (OpenAI). With OpenRouter use namespaced models like `openai/gpt-4o-mini` or `anthropic/claude-3.5-sonnet`.
+- This skill is independent of OpenClaw; you can also use it from the command line.
 
-## Integrazione con OpenClaw
+## Integration with OpenClaw
 
- Una volta installata, la skill sarà disponibile come comando OpenClaw se registrata nel manifest delle skill. Consulta la documentazione OpenClaw su come aggiungere skill personalizzate.
+Once installed, the skill will be available as an OpenClaw command if registered in the skill manifest. Consult the OpenClaw documentation on how to add custom skills.
