@@ -1,3 +1,6 @@
+![Skill](https://img.shields.io/badge/openclaw-lightgrey)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Version](https://img.shields.io/badge/version-0.1.1-orange)
 # Lesson Planner Skill - Quick Guide
 
 This skill for OpenClaw is a simplified version of https://github.com/saniales/ai-lesson-planner by Alessandro Sanino that offers extended features like course competitive analysis, but requires GitHub Actions and therefore Copilot. This version allows the use of different models and OpenRouter keys.
