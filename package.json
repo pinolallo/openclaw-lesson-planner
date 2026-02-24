@@ -1,0 +1,16 @@
+{
+  "name": "lesson-planner",
+  "version": "0.1.0",
+  "description": "Skill per pianificare corsi e generare lezioni, ispirata a ai-lesson-planner ma nativa per OpenClaw",
+  "main": "bin/index.js",
+  "bin": {
+    "lesson-planner": "./bin/index.js"
+  },
+  "keywords": ["openclaw", "skill", "course", "lesson", "education"],
+  "author": "Lallo special agent",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^13.0.0",
+    "openai": "^4.0.0"
+  }
+}

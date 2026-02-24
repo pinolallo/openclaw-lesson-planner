@@ -1,0 +1,26 @@
+{
+  "course": {
+    "title": "Corso di Test",
+    "audience": "studenti",
+    "totalLessons": 2,
+    "durationPerLesson": "",
+    "language": "it",
+    "description": "Il corso fornisce una introduzione pratica ai concetti fondamentali di logica e programmazione. Attraverso esempi concreti e brevi esercitazioni, gli studenti apprenderanno le basi del pensiero algoritmico e la loro traduzione in codice."
+  },
+  "lessons": [
+    {
+      "number": "01",
+      "id": "fondamenti-logica-programmazione",
+      "title": "Fondamenti di Logica e Pensiero Algoritmico",
+      "module": "Logica",
+      "status": "planned"
+    },
+    {
+      "number": "02",
+      "id": "programmazione-base-applicazioni",
+      "title": "Basi di Programmazione: Dalle Idee al Codice",
+      "module": "Programmazione",
+      "status": "planned"
+    }
+  ]
+}
